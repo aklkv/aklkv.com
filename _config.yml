@@ -82,3 +82,10 @@ nofollow:
 ## hexo-generator-seo-friendly-sitemap
 sitemap:
     path: sitemap.xml
+
+# google analytics
+googleTrackId: UA-84222024-1
+
+# disqus comment
+disqus: true
+disqus_shortname: aklkv
