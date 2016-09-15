@@ -1,7 +1,15 @@
 {
-  "name": "hexo-site",
   "version": "0.0.0",
+  "name": "aklkv.com",
+  "author": "Alexey Kulakov <uni_que@me.com>",
+  "description": "Personal website",
+  "homepage": "https://aklkv.com",
+  "license": "MIT",
   "private": true,
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/aklkv/aklkv.com.git"
+  },
   "hexo": {
     "version": "3.2.2"
   },

@@ -1,0 +1,20 @@
+---
+language: node_js
+node_js:
+  - '6'
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+before_install:
+  - npm config set spin false
+
+install:
+  - npm install
+
+script:
+  - npm test
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then hexo deploy; fi
