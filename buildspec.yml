@@ -1,0 +1,17 @@
+version: 0.1
+
+phases:
+  install:
+    commands:
+      - npm config set spin false
+  pre_build:
+    commands:
+      - npm install
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm test
+      - hexo deploy
+  post_build:
+    commands:
+      - echo Build completed on `date`
