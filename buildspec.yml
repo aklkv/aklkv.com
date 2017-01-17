@@ -6,7 +6,6 @@ phases:
       - npm config set spin false
   pre_build:
     commands:
-      - npm i -g hexo-cli
       - npm install
   build:
     commands:
