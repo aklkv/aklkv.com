@@ -3,15 +3,15 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm config set spin false
+      - curl -o- -L https://yarnpkg.com/install.sh | bash
+      - export PATH=$HOME/.yarn/bin:$PATH
   pre_build:
     commands:
-      - npm i -g hexo-cli
-      - npm install
+      - yarn global install hexo-cli
+      - yarn install --prod
   build:
     commands:
       - echo Build started on `date`
-      - npm test
       - hexo deploy
   post_build:
     commands:
