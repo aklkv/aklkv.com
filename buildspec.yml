@@ -3,15 +3,14 @@ version: 0.1
 phases:
   install:
     commands:
-      - npm i -g yarn
-      - yarn global add hexo-cli
+      - npm i -g hexo-cli
   pre_build:
     commands:
-      - yarn install --prod
+      - npm install --prod
   build:
     commands:
       - echo Build started on `date`
-      #- npm test
+      - npm test
       - hexo deploy
   post_build:
     commands:
