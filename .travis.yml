@@ -4,16 +4,25 @@ node_js:
   - 8
 
 sudo: false
+dist: trusty
 
-sudo: required
+branches:
+  only:
+    - master
+    - "/[Vv]?\\d+\\.\\d+\\.\\d+/"
 
 cache:
   directories:
   - $HOME/.npm
 
-install:
-  - npm install --prod
-
-script:
-  - npm test
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then hexo deploy; fi
+jobs:
+  include:
+    - stage: Testing
+    - stage: Deployment
+      script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script: hexo deploy
+        on:
+          tags: true
