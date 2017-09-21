@@ -11,7 +11,7 @@
     "url": "https://github.com/aklkv/aklkv.com.git"
   },
   "hexo": {
-    "version": "3.3.7"
+    "version": "3.3.9"
   },
   "dependencies": {
     "hexo": "^3.3.9",
